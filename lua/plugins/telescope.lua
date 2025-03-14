@@ -1,10 +1,7 @@
 return {
-  "ibhagwan/fzf-lua",
+  "nvim-telescope/telescope.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
-    require("fzf-lua").setup({
-      files = {
-        cmd = "fd --type f --hidden --exclude .git",
-      },
-    })
+    require("telescope").setup()
   end,
 }
